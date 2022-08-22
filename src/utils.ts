@@ -1,4 +1,4 @@
-import { cyan, green, dim } from "kleur";
+import { cyan, green, dim } from "kleur/colors";
 import { gzip } from "node:zlib";
 import { promisify } from "node:util";
 

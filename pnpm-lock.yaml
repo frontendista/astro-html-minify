@@ -7,23 +7,24 @@ specifiers:
   '@parcel/packager-ts': ^2.7.0
   '@parcel/transformer-typescript-tsc': ^2.7.0
   '@parcel/transformer-typescript-types': ^2.7.0
+  '@types/deepmerge': ^2.2.0
   '@types/html-minifier-terser': ^7.0.0
   '@types/node': ^18.7.8
   astro: ^1.0.6
+  deepmerge: ^4.2.2
   fast-glob: ^3.2.11
   html-minifier-terser: ^7.0.0
   kleur: ^4.1.5
   parcel: ^2.7.0
-  ts-deepmerge: ^3.0.0
   typescript: ^4.7.4
 
 dependencies:
   '@parcel/css': 1.13.0
   '@types/html-minifier-terser': 7.0.0
+  deepmerge: 4.2.2
   fast-glob: 3.2.11
   html-minifier-terser: 7.0.0
   kleur: 4.1.5
-  ts-deepmerge: 3.0.0
 
 devDependencies:
   '@parcel/config-default': 2.7.0_@parcel+core@2.7.0
@@ -31,6 +32,7 @@ devDependencies:
   '@parcel/packager-ts': 2.7.0_@parcel+core@2.7.0
   '@parcel/transformer-typescript-tsc': 2.7.0_7uecuwfxmxckiccza3belyuzhe
   '@parcel/transformer-typescript-types': 2.7.0_7uecuwfxmxckiccza3belyuzhe
+  '@types/deepmerge': 2.2.0
   '@types/node': 18.7.9
   astro: 1.0.6
   parcel: 2.7.0
@@ -1407,6 +1409,13 @@ packages:
       '@types/ms': 0.7.31
     dev: true
 
+  /@types/deepmerge/2.2.0:
+    resolution: {integrity: sha512-FEQYDHh6+Q+QXKSrIY46m+/lAmAj/bk4KpLaam+hArmzaVpMBHLcfwOH2Q2UOkWM7XsdY9PmZpGyPAjh/JRGhQ==}
+    deprecated: This is a stub types definition. deepmerge provides its own type definitions, so you do not need this installed.
+    dependencies:
+      deepmerge: 4.2.2
+    dev: true
+
   /@types/estree-jsx/0.0.1:
     resolution: {integrity: sha512-gcLAYiMfQklDCPjQegGn0TBAn9it05ISEsEhlKQUddIk7o2XDokOcTN7HBO8tznM0D9dGezvHEfRZBfZf6me0A==}
     dependencies:
@@ -1923,7 +1932,6 @@ packages:
   /deepmerge/4.2.2:
     resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /defaults/1.0.3:
     resolution: {integrity: sha512-s82itHOnYrN0Ib8r+z7laQz3sdE+4FP3d9Q7VLO7U+KRT+CR0GsWuyHxzdAY82I7cXv0G/twrqomTJLOssO5HA==}
@@ -4232,11 +4240,6 @@ packages:
   /trough/2.1.0:
     resolution: {integrity: sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==}
     dev: true
-
-  /ts-deepmerge/3.0.0:
-    resolution: {integrity: sha512-gpjFrde/nE3jp7l5cJTDpyhdbGdAIO/AkNjaz4V9odnopdLd9NVrQcBDEBiE/ucMV9dmNOcdgzOVwS7U6SsBhA==}
-    engines: {node: '>=14'}
-    dev: false
 
   /tsconfig-resolver/3.0.1:
     resolution: {integrity: sha512-ZHqlstlQF449v8glscGRXzL6l2dZvASPCdXJRWG4gHEZlUVx2Jtmr+a2zeVG4LCsKhDXKRj5R3h0C/98UcVAQg==}

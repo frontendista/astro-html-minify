@@ -1,10 +1,11 @@
-import glob from "fast-glob";
-import { bgBlue, black } from "kleur";
-import { fileURLToPath } from "url";
+import { fileURLToPath } from "node:url";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+
+import glob from "fast-glob";
+import { bgBlue, black, dim } from "kleur/colors";
 import { minify as htmlMinify } from "html-minifier-terser";
-import { dim } from "kleur";
+
 import { getTimeStat, reportSize } from "./utils";
 import type { IntegrationOptions } from "./options";
 

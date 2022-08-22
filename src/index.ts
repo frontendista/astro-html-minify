@@ -1,4 +1,5 @@
-import merge from "ts-deepmerge";
+import merge from "deepmerge";
+
 import { minify } from "./minify";
 import { defaultOptions, type IntegrationOptions } from "./options";
 
