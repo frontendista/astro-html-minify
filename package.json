@@ -16,7 +16,7 @@
     "prepublishOnly": "pnpm build"
   },
   "source": "src/index.ts",
-  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "dependencies": {
     "@parcel/css": "^1.12.2",

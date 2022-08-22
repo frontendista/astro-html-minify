@@ -83,10 +83,10 @@ pnpm astro build
 
 # 2. Integration options
 
-| Flag                        | Description                                   | Default Value                                    |
-| --------------------------- | --------------------------------------------- | ------------------------------------------------ |
-| `reportCompressedSize`      | Log gzipped optimized HTML size               | depends on vite.build.reportCompressedSize value |
-| `htmlTerserMinifierOptions` | override default html-minifier-terser options | See table below                                  |
+| Flag                        | Description                                   | Default Value                                 |
+| --------------------------- | --------------------------------------------- | --------------------------------------------- |
+| `reportCompressedSize`      | Log gzipped optimized HTML size               | same as vite.build.reportCompressedSize value |
+| `htmlTerserMinifierOptions` | override default html-minifier-terser options | See table below                               |
 
 ## 2.1 Default html-minifier-terser options
 
