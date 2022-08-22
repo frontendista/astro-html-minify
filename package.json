@@ -1,6 +1,6 @@
 {
   "name": "@frontendista/astro-html-minify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "astro-adapter"
   ],
@@ -17,7 +17,7 @@
     "prepublishOnly": "pnpm build"
   },
   "source": "src/index.ts",
-  "module": "lib/index.esm.js",
+  "main": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "dependencies": {
     "@parcel/css": "^1.12.2",
