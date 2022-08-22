@@ -15,8 +15,9 @@ export default function createIntegration(
     hooks: {
       "astro:config:setup": ({ config }) => {
         if (typeof options.reportCompressedSize === "undefined") {
-          options.reportCompressedSize =
-            config.vite.build?.reportCompressedSize;
+          options.reportCompressedSize = config.vite.build
+            ? config.vite.build.reportCompressedSize
+            : true;
         }
       },
       "astro:build:done": async ({ dir }) => {

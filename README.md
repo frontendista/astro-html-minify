@@ -1,5 +1,9 @@
 # Astro HTML minify
 
+![Astro html minify integration CLI output example](./docs/images/example.png)
+
+HTML minifier for statically rendered files in Astro
+
 Little Astro integration for optimizing statically rendered HTML, it uses [html-minifier-terser](https://github.com/terser/html-minifier-terser) and [@parcel/css](https://github.com/parcel-bundler/parcel-css) for fast minification.
 
 If you want advanced optimizations (such as images, svgs) see [astro-compress](https://github.com/Playform/astro-compress).
