@@ -1,8 +1,8 @@
 {
   "name": "@frontendista/astro-html-minify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
-    "astro-adapter"
+    "astro-integration"
   ],
   "files": [
     "lib",
