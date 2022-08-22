@@ -5,15 +5,13 @@ import { defaultOptions, type IntegrationOptions } from "./options";
 
 import type { AstroIntegration } from "astro";
 
-const pluginName = "@frontendista/astro-minify";
-
 export default function createIntegration(
   options: IntegrationOptions = {}
 ): AstroIntegration {
   options = merge(defaultOptions, options);
 
   return {
-    name: pluginName,
+    name: "@frontendista/astro-minify",
     hooks: {
       "astro:config:setup": ({ config }) => {
         if (typeof options.reportCompressedSize === "undefined") {
