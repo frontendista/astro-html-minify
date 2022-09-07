@@ -38,7 +38,7 @@ export const defaultOptions: IntegrationOptions = {
     removeStyleLinkTypeAttributes: true,
     removeScriptTypeAttributes: true,
     removeRedundantAttributes: true,
-    removeComments: true,
+    removeComments: false,
     processConditionalComments: true,
     keepClosingSlash: true,
     caseSensitive: true,
