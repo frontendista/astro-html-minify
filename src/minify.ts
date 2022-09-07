@@ -11,7 +11,11 @@ import type { IntegrationOptions } from "./options";
 
 export async function minify(
   distDirectory: string,
-  { htmlTerserMinifierOptions, reportCompressedSize }: IntegrationOptions
+  {
+    htmlTerserMinifierOptions,
+    reportCompressedSize,
+    removeTestAttributes,
+  }: IntegrationOptions
 ) {
   const timer = performance.now();
 
@@ -31,7 +35,18 @@ export async function minify(
   for (const filename of htmlFiles) {
     const filePath = join(cwd, filename);
 
-    const html = await readFile(filePath, "utf8");
+    let html = await readFile(filePath, "utf8");
+
+    html = removeTestAttributes
+      ? [
+          /data-test=".*?"/g,
+          /data-test-id=".*?"/g,
+          /data-testid=".*?"/g,
+        ].reduce((currentHTML, attributeRegex) => {
+          return currentHTML.replace(attributeRegex, "");
+        }, html)
+      : html;
+
     const optimizedHTML = await htmlMinify(html, htmlTerserMinifierOptions);
 
     await reportSize(filename, html, optimizedHTML, reportCompressedSize);

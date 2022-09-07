@@ -15,9 +15,20 @@ export interface IntegrationOptions {
    * Overrides the value from vite.build.reportCompressedSize.
    */
   reportCompressedSize?: boolean;
+  /**
+   * Removes data-test attributes fro html.
+   *
+   * - data-test
+   * - data-test-id
+   * - data-testid
+   *
+   * @default false
+   */
+  removeTestAttributes?: boolean;
 }
 
 export const defaultOptions: IntegrationOptions = {
+  removeTestAttributes: false,
   htmlTerserMinifierOptions: {
     minifyCSS,
     minifyJS: true,

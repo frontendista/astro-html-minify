@@ -91,6 +91,7 @@ pnpm astro build
 | --------------------------- | --------------------------------------------- | --------------------------------------------- |
 | `reportCompressedSize`      | Log gzipped optimized HTML size               | same as vite.build.reportCompressedSize value |
 | `htmlTerserMinifierOptions` | override default html-minifier-terser options | See table below                               |
+| `removeTestAttributes`      | removes test related attributes               | false                                         |
 
 ## 2.1 Default html-minifier-terser options
 
