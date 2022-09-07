@@ -1,7 +1,7 @@
 {
   "name": "@frontendista/astro-html-minify",
   "description": "HTML minifier for statically rendered files in Astro",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "astro-integration",
     "astro",
