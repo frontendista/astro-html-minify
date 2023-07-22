@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "✨ @frontendista/astro-html-minify",
+			"path": ".."
+		},
+		{
+			"name": "🚀 demo",
+			"path": "../demo"
+		}
+	],
+	"settings": {}
+}
