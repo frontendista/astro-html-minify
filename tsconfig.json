@@ -1,10 +1,14 @@
 {
-  "compilerOptions": {
-    "isolatedModules": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "skipLibCheck": true
-  }
+	"compilerOptions": {
+		"isolatedModules": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"skipLibCheck": true,
+		"moduleResolution": "Node",
+		"module": "ESNext",
+		"target": "ESNext"
+	},
+	"include": ["src/**/*"]
 }

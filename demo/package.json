@@ -1,15 +1,19 @@
 {
-  "name": "demo",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.9.1"
-  }
+	"name": "demo",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@frontendista/astro-html-minify": "workspace:^",
+		"astro": "^2.9.1"
+	},
+	"browserslist": [
+		"Explorer 11"
+	]
 }
