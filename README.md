@@ -1,9 +1,6 @@
 # Astro HTML minify
 
-HTML minifier for statically rendered files in Astro
-
-> **Info**
-> If you need other than HTML optimizations see [astro-compress](https://github.com/Playform/astro-compress).
+HTML minifier for statically rendered files in Astro.
 
 # 1. Usage
 
@@ -35,101 +32,40 @@ yarn add -D @frontendista/astro-html-minify
 pnpm add -D @frontendista/astro-html-minify
 ```
 
-### 1.2.1 Add to configuration
+### 1.2.2 Add to configuration
 
 Default import the integration and add it to `integrations` key in your `astro.config.{mjs,js,ts}` configuration.
 
 ```ts
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
-import htmlMinify from "@frontendista/astro-html-minify";
+
+import minify from "@frontendista/astro-html-minify";
 
 export default defineConfig({
-	integrations: [compress(), htmlMinify()]
+	integrations: [minify()]
 });
 ```
 
-## 1.3 How to customize integration options
+## 1.3 Customize minifiers options
 
 ```ts
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
-import htmlMinify from "@frontendista/astro-html-minify";
+
+import minify from "@frontendista/astro-html-minify";
 
 export default defineConfig({
 	integrations: [
-		compress(),
-		htmlMinify({
-			reportCompressedSize: false,
-			htmlTerserMinifierOptions: {
-				removeComments: false
+		minify({
+			html: {
+				// Customize Terser options
+			},
+			css: {
+				// Customize LightningCSS options
+			},
+			js: {
+				// Customize ESBuild options
 			}
 		})
 	]
 });
 ```
-
-**Note:** Your custom configuration is merged with the defaults, so feel free to omit properties.
-
-## 1.4 You are good to go 🚀
-
-```sh
-# Build your application
-pnpm astro build
-
-# Check your minified **/*.html files in your build folder
-```
-
--   Note that minification occurs only in building the application. In development mode it is left intact.
-
-# 2. Integration options
-
-| Flag                        | Description                                   | Default Value                                 |
-| --------------------------- | --------------------------------------------- | --------------------------------------------- |
-| `reportCompressedSize`      | Log gzipped optimized HTML size               | same as vite.build.reportCompressedSize value |
-| `htmlTerserMinifierOptions` | override default html-minifier-terser options | See table below                               |
-| `removeTestAttributes`      | removes test related attributes               | false                                         |
-
-## 2.1 Default html-minifier-terser options
-
-| Option                          | @frontendista/astro-html-minify default                             | html-minifier-terser default                                  |
-| ------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------- |
-| `caseSensitive`                 | true                                                                | `false`                                                       |
-| `collapseBooleanAttributes`     |                                                                     | `false`                                                       |
-| `collapseInlineTagWhitespace`   | true                                                                | `false`                                                       |
-| `collapseWhitespace`            | true                                                                | `false`                                                       |
-| `conservativeCollapse`          |                                                                     | `false`                                                       |
-| `continueOnParseError`          |                                                                     | `false`                                                       |
-| `customAttrAssign`              |                                                                     | `[ ]`                                                         |
-| `customAttrCollapse`            |                                                                     |                                                               |
-| `customAttrSurround`            |                                                                     | `[ ]`                                                         |
-| `customEventAttributes`         |                                                                     | `[ /^on[a-z]{3,}$/ ]`                                         |
-| `decodeEntities`                |                                                                     | `false`                                                       |
-| `html5`                         |                                                                     | `true`                                                        |
-| `ignoreCustomComments`          |                                                                     | `[ /^!/, /^\s*#/ ]`                                           |
-| `ignoreCustomFragments`         |                                                                     | `[ /<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/ ]`                        |
-| `includeAutoGeneratedTags`      |                                                                     | `true`                                                        |
-| `keepClosingSlash`              | true                                                                | `false`                                                       |
-| `maxLineLength`                 |                                                                     |
-| `minifyCSS`                     | Uses [lightningcss](https://github.com/parcel-bundler/lightningcss) | `false` (could be `true`, `Object`, `Function(text, type)`)   |
-| `minifyJS`                      | true                                                                | `false` (could be `true`, `Object`, `Function(text, inline)`) |
-| `minifyURLs`                    |                                                                     | `false` (could be `String`, `Object`, `Function(text)`)       |
-| `noNewlinesBeforeTagClose`      |                                                                     | `false`                                                       |
-| `preserveLineBreaks`            |                                                                     | `false`                                                       |
-| `preventAttributesEscaping`     |                                                                     | `false`                                                       |
-| `processConditionalComments`    | true                                                                | `false`                                                       |
-| `processScripts`                |                                                                     | `[ ]`                                                         |
-| `quoteCharacter`                |                                                                     |                                                               |
-| `removeAttributeQuotes`         |                                                                     | `false`                                                       |
-| `removeComments`                | true                                                                | `false`                                                       |
-| `removeEmptyAttributes`         |                                                                     | `false` (could be `true`, `Function(attrName, tag)`)          |
-| `removeEmptyElements`           |                                                                     | `false`                                                       |
-| `removeOptionalTags`            |                                                                     | `false`                                                       |
-| `removeRedundantAttributes`     | true                                                                | `false`                                                       |
-| `removeScriptTypeAttributes`    | true                                                                | `false`                                                       |
-| `removeStyleLinkTypeAttributes` | true                                                                | `false`                                                       |
-| `removeTagWhitespace`           | true                                                                | `false`                                                       |
-| `sortAttributes`                |                                                                     | `false`                                                       |
-| `sortClassName`                 | true                                                                | `false`                                                       |
-| `trimCustomFragments`           |                                                                     | `false`                                                       |
-| `useShortDoctype`               |                                                                     | `false`                                                       |
