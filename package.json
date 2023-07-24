@@ -1,14 +1,14 @@
 {
 	"name": "@frontendista/astro-html-minify",
 	"description": "HTML minifier for statically rendered files in Astro",
-	"version": "1.0.7",
+	"version": "2.0.0",
 	"keywords": [
 		"astro-integration",
 		"astro",
 		"html-terser-minifier"
 	],
 	"files": [
-		"lib",
+		"dist",
 		"package.json",
 		"LICENCE.md",
 		"README.md"
@@ -23,17 +23,13 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"peerDependencies": {
-		"astro": "^2.9.1"
+		"astro": "^2.0.0"
 	},
 	"dependencies": {
-		"deepmerge": "^4.3.1",
-		"fast-glob": "^3.3.1",
-		"html-minifier-terser": "^7.2.0",
-		"kleur": "^4.1.5",
-		"lightningcss": "^1.21.5"
+		"@frontendista/html-minifier-terser": "^0.2.1",
+		"glob": "^10.3.3"
 	},
 	"devDependencies": {
-		"@types/html-minifier-terser": "^7.0.0",
 		"@types/node": "^18.16.20",
 		"astro": "^2.9.1",
 		"tsup": "^7.1.0",
